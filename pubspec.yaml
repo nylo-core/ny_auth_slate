@@ -1,5 +1,5 @@
 name: ny_auth_slate
-description: A new Slate package to quickly scaffold a login + register system.
+description: Slate package to quickly scaffold a login + register system.
 version: 0.0.1
 homepage: https://nylo.dev
 
