@@ -28,7 +28,7 @@ dependencies:
 Run the below command in your project.
 
 ``` bash
-flutter pub run lo_auth:main publish:all
+flutter pub run ny_auth_slate:main publish:all
 ```
 
 ## Licence
