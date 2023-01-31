@@ -52,7 +52,9 @@ Future<void> commands(List<String> arguments) async {
 
 _publishAll(List<String> arguments) async {
   parser.addFlag(helpFlag,
-      abbr: 'h', help: 'Publish all the files from this package.', negatable: false);
+      abbr: 'h',
+      help: 'Publish all the files from this package.',
+      negatable: false);
   parser.addFlag(forceFlag,
       abbr: 'f',
       help: 'Creates new widgets even if they already exist.',
