@@ -20,7 +20,6 @@ dependencies:
   - Register
 - Widgets
   - Buttons
-  - Logo
   - Text Fields
 
 ## Usage
