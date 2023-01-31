@@ -2,7 +2,6 @@ library ny_auth_slate;
 
 import '/stubs/buttons.dart';
 import '/stubs/login_page.dart';
-import '/stubs/logo.dart';
 import '/stubs/register_page.dart';
 import '/stubs/text_fields.dart';
 import 'package:nylo_support/metro/constants/strings.dart';
