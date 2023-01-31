@@ -55,7 +55,7 @@ class _LoginPageState extends NyState<LoginPage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    LogoWidget(
+                    Logo(
                       height: 50,
                       width: 50,
                     ),

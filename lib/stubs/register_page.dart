@@ -8,16 +8,16 @@ import '/resources/widgets/text_fields_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class LoginPage extends NyStatefulWidget {
+class RegisterPage extends NyStatefulWidget {
   final Controller controller = Controller();
 
-  LoginPage({Key? key}) : super(key: key);
+  RegisterPage({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _RegisterPageState createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends NyState<LoginPage> {
+class _RegisterPageState extends NyState<RegisterPage> {
   TextEditingController _txtNameController = TextEditingController(),
       _txtEmailController = TextEditingController(),
       _txtPasswordController = TextEditingController();
@@ -75,7 +75,7 @@ class _LoginPageState extends NyState<LoginPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Container(
-                          child: LogoWidget(
+                          child: Logo(
                             height: 30,
                             width: 50,
                           ),
