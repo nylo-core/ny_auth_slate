@@ -21,13 +21,13 @@ import 'package:nylo_support/metro/models/ny_template.dart';
 
 List<NyTemplate> run() => [
       NyTemplate(
-        name: "login_page",
+        name: "login",
         saveTo: pagesFolder,
         pluginsRequired: [],
         stub: stubLoginPage(),
       ),
       NyTemplate(
-        name: "register_page",
+        name: "register",
         saveTo: pagesFolder,
         pluginsRequired: ['url_launcher'],
         stub: stubRegisterPage(),
@@ -43,12 +43,6 @@ List<NyTemplate> run() => [
         saveTo: widgetsFolder,
         pluginsRequired: [],
         stub: stubTextFields(),
-      ),
-      NyTemplate(
-        name: "logo",
-        saveTo: widgetsFolder,
-        pluginsRequired: [],
-        stub: stubLogoWidget(),
       ),
     ];
 
