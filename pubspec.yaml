@@ -5,8 +5,8 @@ repository: https://github.com/nylo-core/ny_auth_slate
 homepage: https://nylo.dev
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ^2.19.0
+#  flutter: ">=1.17.0"
 
 dependencies:
   nylo_support: ^5.1.3
