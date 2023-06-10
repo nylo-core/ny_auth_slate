@@ -1,3 +1,7 @@
+## 0.0.12
+
+* Automate
+
 ## 0.0.7
 
 * Automate

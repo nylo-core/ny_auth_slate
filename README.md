@@ -7,7 +7,7 @@ In your flutter project add the dependency:
 ``` dart 
 dependencies:
   ...
-  ny_auth_slate: ^0.0.7
+  ny_auth_slate: ^0.0.12
 ```
 
 ## Requirements
