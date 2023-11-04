@@ -1,6 +1,7 @@
 String stubButtons() => '''
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/bootstrap/extensions.dart';
 import 'package:flutter_app/bootstrap/helpers.dart';
 
 class AccentButton extends StatelessWidget {

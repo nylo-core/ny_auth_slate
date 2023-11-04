@@ -7,7 +7,19 @@ In your flutter project add the dependency:
 ``` dart 
 dependencies:
   ...
-  ny_auth_slate: ^0.0.13
+  ny_auth_slate: ^0.1.0
+```
+
+``` bash
+flutter pub add ny_auth_slate
+```
+
+## Usage
+
+Run the below command in your project.
+
+``` bash
+dart run nylo_framework:main publish:slate ny_auth_slate
 ```
 
 ## Requirements
@@ -21,14 +33,6 @@ dependencies:
 - Widgets
   - Buttons
   - Text Fields
-
-## Usage
-
-Run the below command in your project.
-
-``` bash
-flutter pub run ny_auth_slate:main publish:all
-```
 
 ## Licence
 

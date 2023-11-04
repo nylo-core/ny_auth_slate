@@ -8,6 +8,8 @@ import '/app/controllers/controller.dart';
 
 class LoginPage extends NyStatefulWidget {
   final Controller controller = Controller();
+  
+  static String path = '/login';
 
   LoginPage({Key? key}) : super(key: key);
 

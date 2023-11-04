@@ -15,7 +15,7 @@ import 'package:nylo_support/metro/models/ny_template.dart';
 | Run the below in the terminal to create your stubs.
 | "flutter pub run ny_auth_slate:main publish:all"
 |
-| Learn more https://nylo.dev/docs/4.x/slates
+| Learn more https://nylo.dev/docs/5.x/slates
 |--------------------------------------------------------------------------
 */
 
@@ -48,7 +48,7 @@ List<NyTemplate> run() => [
 
 /*
 |--------------------------------------------------------------------------
-| Reference - saveTo Accepted Folders
+| Directory Reference
 |
 | controllersFolder = 'lib/app/controllers';
 | widgetsFolder = 'lib/resources/widgets';

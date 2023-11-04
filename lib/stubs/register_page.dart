@@ -10,6 +10,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 class RegisterPage extends NyStatefulWidget {
   final Controller controller = Controller();
+  
+  static String path = '/login';
 
   RegisterPage({Key? key}) : super(key: key);
 
