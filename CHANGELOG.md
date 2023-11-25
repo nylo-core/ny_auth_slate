@@ -1,3 +1,8 @@
+## 0.2.0 - 2023-11-25
+
+* Update stubs
+* Update pubspec.yaml
+
 ## 0.1.0 - 2023-11-04
 
 * Update stubs

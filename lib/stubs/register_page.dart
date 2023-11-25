@@ -1,7 +1,6 @@
 String stubRegisterPage() => '''
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import '/app/controllers/controller.dart';
 import '/resources/widgets/buttons_widget.dart';
 import '/resources/widgets/logo_widget.dart';
 import '/resources/widgets/text_fields_widget.dart';
@@ -9,14 +8,9 @@ import 'package:nylo_framework/nylo_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class RegisterPage extends NyStatefulWidget {
-  final Controller controller = Controller();
-  
-  static String path = '/login';
+  static String path = '/register';
 
-  RegisterPage({Key? key}) : super(key: key);
-
-  @override
-  _RegisterPageState createState() => _RegisterPageState();
+  RegisterPage({Key? key}) : super(path, key: key, child: _RegisterPageState());
 }
 
 class _RegisterPageState extends NyState<RegisterPage> {
@@ -184,8 +178,8 @@ class _RegisterPageState extends NyState<RegisterPage> {
     );
   }
 
-  Uri privacyUrl() => Uri.parse("\${getEnv('APP_URL')}/\${Uri.parse("privacy-policy")}");
+  Uri privacyUrl() => Uri.parse("\${getEnv('APP_URL')}/${Uri.parse("privacy-policy")}");
 
-  Uri termsUrl() => Uri.parse("\${getEnv('APP_URL')}/\${Uri.parse("terms-and-conditions")}");
+  Uri termsUrl() => Uri.parse("\${getEnv('APP_URL')}/${Uri.parse("terms-and-conditions")}");
 }
 ''';

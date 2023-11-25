@@ -4,17 +4,11 @@ import '/resources/widgets/logo_widget.dart';
 import '/resources/widgets/buttons_widget.dart';
 import '/resources/widgets/text_fields_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import '/app/controllers/controller.dart';
 
 class LoginPage extends NyStatefulWidget {
-  final Controller controller = Controller();
-  
   static String path = '/login';
 
-  LoginPage({Key? key}) : super(key: key);
-
-  @override
-  _LoginPageState createState() => _LoginPageState();
+  LoginPage({Key? key}) : super(path, key: key, child: _LoginPageState());
 }
 
 class _LoginPageState extends NyState<LoginPage> {

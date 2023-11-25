@@ -19,7 +19,7 @@ class AccentButton extends StatelessWidget {
         key: key,
         title: title,
         action: action,
-        textStyle: Theme.of(context).textTheme.bodyText1,
+        textStyle: Theme.of(context).textTheme.bodyLarge,
         bgColor: ThemeColor.get(context).primaryAccent,
       );
 }
@@ -41,7 +41,7 @@ class SecondaryButton extends StatelessWidget {
         action: action,
         textStyle: Theme.of(context)
             .textTheme
-            .bodyText1!
+            .bodyLarge!
             .copyWith(color: Colors.white),
         bgColor: ThemeColor.get(context).buttonBackground,
       );
@@ -77,7 +77,7 @@ class DefaultButton extends StatelessWidget {
             ),
             padding: EdgeInsets.all(8),
             elevation: 0,
-            primary: bgColor,
+            backgroundColor: bgColor,
             shadowColor: Colors.transparent),
         child: Text(
           title,
@@ -147,7 +147,7 @@ class _PrimaryButtonWidgetState extends State<PrimaryButtonWidget> {
                 widget.text,
                 style: Theme.of(context)
                     .textTheme
-                    .subtitle1!
+                    .titleMedium!
                     .setColor(context, (color) => color.buttonPrimaryContent),
                 textAlign: TextAlign.center,
               ),
@@ -155,4 +155,4 @@ class _PrimaryButtonWidgetState extends State<PrimaryButtonWidget> {
     );
   }
 }
- ''';
+''';

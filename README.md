@@ -7,7 +7,7 @@ In your flutter project add the dependency:
 ``` dart 
 dependencies:
   ...
-  ny_auth_slate: ^0.1.0
+  ny_auth_slate: ^0.2.0
 ```
 
 ``` bash
