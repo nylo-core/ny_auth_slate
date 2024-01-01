@@ -1,3 +1,8 @@
+## [0.3.0] - 2024-01-01
+
+* Update licence date
+* Update pubspec.yaml
+
 ## 0.2.0 - 2023-11-25
 
 * Update stubs

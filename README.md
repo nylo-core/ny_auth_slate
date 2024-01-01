@@ -7,7 +7,7 @@ In your flutter project add the dependency:
 ``` dart 
 dependencies:
   ...
-  ny_auth_slate: ^0.2.0
+  ny_auth_slate: ^0.3.0
 ```
 
 ``` bash
@@ -19,7 +19,13 @@ flutter pub add ny_auth_slate
 Run the below command in your project.
 
 ``` bash
-dart run nylo_framework:main publish:slate ny_auth_slate
+dart run ny_auth_slate:main publish:all
+```
+
+With Nylo
+
+``` bash 
+metro publish:slate ny_auth_slate
 ```
 
 ## Requirements
