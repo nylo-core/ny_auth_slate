@@ -7,17 +7,15 @@ import '/stubs/text_fields.dart';
 import 'package:nylo_support/metro/constants/strings.dart';
 import 'package:nylo_support/metro/models/ny_template.dart';
 
-/*
+/* Publish template files
 |--------------------------------------------------------------------------
-| Publish template files
 |
 | Add your template to the `run` method and create a stub.
 | Run the below in the terminal to create your stubs.
 | "flutter pub run ny_auth_slate:main publish:all"
 |
 | Learn more https://nylo.dev/docs/5.20.0/slates
-|--------------------------------------------------------------------------
-*/
+|-------------------------------------------------------------------------- */
 
 List<NyTemplate> run() => [
       NyTemplate(
