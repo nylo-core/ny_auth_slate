@@ -62,7 +62,7 @@ class _LoginPageState extends NyState<LoginPage> {
                         'Welcome back',
                         style: Theme.of(context)
                             .textTheme
-                            .bodyText2!
+                            .bodyMedium!
                             .copyWith(fontSize: 20),
                       ),
                     ),
