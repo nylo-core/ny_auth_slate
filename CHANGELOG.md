@@ -1,3 +1,7 @@
+## [0.5.1] - 2024-06-23
+
+* Update pubspec.yaml
+
 ## [0.5.0] - 2024-06-11
 
 * Update login_page.dart
