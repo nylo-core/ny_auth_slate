@@ -1,6 +1,6 @@
 name: ny_auth_slate
 description: Slate package to quickly scaffold a login + register system.
-version: 0.5.1
+version: 0.5.2
 repository: https://github.com/nylo-core/ny_auth_slate
 homepage: https://nylo.dev
 
@@ -9,7 +9,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  nylo_support: ^5.76.0
+  nylo_support: ^5.79.1
   flutter:
     sdk: flutter
   args: ^2.5.0
