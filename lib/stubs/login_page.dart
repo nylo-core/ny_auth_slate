@@ -1,115 +1,55 @@
 String stubLoginPage() => '''
-import 'package:flutter/material.dart';
 import '/resources/widgets/logo_widget.dart';
-import '/resources/widgets/buttons_widget.dart';
-import '/resources/widgets/text_fields_widget.dart';
+import '/bootstrap/extensions.dart';
+import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class LoginPage extends NyStatefulWidget {
-  static String path = '/login';
+  static const path = '/login';
 
-  LoginPage({Key? key}) : super(path, key: key, child: _LoginPageState());
+  LoginPage() : super(path, child: () => _LoginPageState());
 }
 
 class _LoginPageState extends NyState<LoginPage> {
 
-  TextEditingController _txtEmailController = TextEditingController(),
-      _txtPasswordController = TextEditingController();
-  
-  @override
-  init() async {
-    whenEnv('developing', perform: () {
-      _txtEmailController.text = 'fake@gmail.com';
-      _txtPasswordController.text = 'password';
-    });
-  }
-
-  loginUser() async {
-    String email = _txtEmailController.text;
-    String password = _txtPasswordController.text;
-    
-    await lockRelease('login', perform: () async {
-      /// handle login
-      await Future.delayed(Duration(seconds: 2));
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      resizeToAvoidBottomInset: false,
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black),
+        title: Logo(height: 40),
+      ),
       body: SafeArea(
         minimum: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: ListView(
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Logo(
-                      height: 50,
-                      width: 50,
-                    ),
-                    Container(
-                      height: 60,
-                      padding: EdgeInsets.only(top: 10),
-                      child: Text(
-                        'Welcome back',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyMedium!
-                            .copyWith(fontSize: 20),
-                      ),
-                    ),
-                  ],
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 40),
-                  child: Column(children: <Widget>[
-                    PrimaryTextFieldWidget(
-                      controller: _txtEmailController,
-                      labelText: "EMAIL",
-                      enableSuggestions: false,
-                      textInputType: TextInputType.emailAddress,
-                      obscureText: false,
-                    ),
-                    PrimaryTextFieldWidget(
-                      controller: _txtPasswordController,
-                      labelText: "PASSWORD",
-                      obscureText: true,
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    PrimaryButtonWidget(
-                      action: loginUser,
-                      text: "Log in",
-                      isLoading: isLocked('login'),
-                    ),
-                  ]),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      alignment: AlignmentDirectional.center,
-                      child: InkWell(
-                        child: Text(
-                          'Forgot your password?',
-                        ),
-                        onTap: () =>
-                            Navigator.pushNamed(context, "/forgot-password"),
-                      ),
-                    ),
-                  ],
-                )
-              ],
+            Text("Login".tr()).headingSmall(context).fontWeightBold().paddingOnly(bottom: 25),
+            NyForm.login(name: "login", crossAxisSpacing: 20),
+            Container(
+              height: 45,
+              margin: EdgeInsets.only(top: 20, bottom: 20),
+              width: double.infinity,
+              child: MaterialButton(
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  padding: EdgeInsets.symmetric(vertical: 8),
+                  color: Colors.black87,
+                  child: Text((isLocked('login') ? "Processing".tr() : "Login".tr()))
+                      .bodyMedium(context)
+                      .fontWeightBold()
+                      .setColor(context, (color) => Colors.white),
+                  onPressed: () {
+                    NyForm.submit("login", onSuccess: (data) {
+                      // add your code here
+                      // data = {"email": "email", "password": "password"}
+                    });
+                  }
+              ),
             ),
+            Text("Forgot your password?".tr(), textAlign: TextAlign.center).onTap(() {
+              // add your code here
+            })
           ],
         ),
       ),

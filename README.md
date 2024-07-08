@@ -7,7 +7,7 @@ In your flutter project add the dependency:
 ``` dart 
 dependencies:
   ...
-  ny_auth_slate: ^0.5.2
+  ny_auth_slate: ^1.0.0
 ```
 
 ``` bash
@@ -25,7 +25,7 @@ dart run ny_auth_slate:main publish:all
 With Nylo
 
 ``` bash 
-metro publish:slate ny_auth_slate
+metro slate:publish ny_auth_slate
 ```
 
 ## Requirements
@@ -36,9 +36,7 @@ metro publish:slate ny_auth_slate
 - Pages
   - Login
   - Register
-- Widgets
-  - Buttons
-  - Text Fields
+  - Landing
 
 ## Licence
 

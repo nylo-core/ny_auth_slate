@@ -1,9 +1,10 @@
 library ny_auth_slate;
 
-import '/stubs/buttons.dart';
+import '/stubs/landing_page.dart';
+import '/stubs/login_form.dart';
+import '/stubs/register_form.dart';
 import '/stubs/login_page.dart';
 import '/stubs/register_page.dart';
-import '/stubs/text_fields.dart';
 import 'package:nylo_support/metro/constants/strings.dart';
 import 'package:nylo_support/metro/models/ny_template.dart';
 
@@ -19,6 +20,12 @@ import 'package:nylo_support/metro/models/ny_template.dart';
 
 List<NyTemplate> run() => [
       NyTemplate(
+        name: "landing",
+        saveTo: pagesFolder,
+        pluginsRequired: [],
+        stub: stubLandingPage(),
+      ),
+      NyTemplate(
         name: "login",
         saveTo: pagesFolder,
         pluginsRequired: [],
@@ -31,16 +38,16 @@ List<NyTemplate> run() => [
         stub: stubRegisterPage(),
       ),
       NyTemplate(
-        name: "buttons",
-        saveTo: widgetsFolder,
+        name: "register_form",
+        saveTo: formsFolder,
         pluginsRequired: [],
-        stub: stubButtons(),
+        stub: stubRegisterForm(),
       ),
       NyTemplate(
-        name: "text_fields",
-        saveTo: widgetsFolder,
+        name: "login_form",
+        saveTo: formsFolder,
         pluginsRequired: [],
-        stub: stubTextFields(),
+        stub: stubLoginForm(),
       ),
     ];
 

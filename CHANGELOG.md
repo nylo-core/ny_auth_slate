@@ -1,3 +1,12 @@
+## [1.0.0] - 2024-07-08
+
+* Update stubs
+  * New Login Page
+  * New Landing Page
+  * New Register Page
+  * Remove Widgets
+* Update pubspec.yaml
+
 ## [0.5.2] - 2024-06-06
 
 * Update pubspec.yaml
